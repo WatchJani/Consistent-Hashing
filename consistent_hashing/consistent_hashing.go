@@ -8,6 +8,8 @@ import (
 	"sort"
 )
 
+const ConfigFile = "../config.json"
+
 type ConsistentHashing struct {
 	*Configuration
 	VirtualServers []VirtualServer
