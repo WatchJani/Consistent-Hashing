@@ -8,6 +8,12 @@ import (
 	"sort"
 )
 
+type ConsistentHashing struct {
+	*Configuration
+	VirtualServers []VirtualServer
+	Namer          int
+}
+
 type Server struct {
 	Addr string `json:"ip"`
 	Name string `json:"name"`
@@ -28,12 +34,6 @@ func NewConfiguration() *Configuration {
 	return &Configuration{
 		Servers: make([]Server, 0),
 	}
-}
-
-type ConsistentHashing struct {
-	*Configuration
-	VirtualServers []VirtualServer
-	Namer          int
 }
 
 func (c *ConsistentHashing) NewVirtualServer(server *Server) VirtualServer {
