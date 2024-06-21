@@ -38,8 +38,7 @@ type ConsistentHashing struct {
 
 func (c *ConsistentHashing) NewVirtualServer(server *Server) VirtualServer {
 	c.Namer = (c.Namer + 1) % c.VirtualNodeServer
-	nodeID := c.Namer
-	name := fmt.Sprintf("%s_%d", server.Name, nodeID)
+	name := fmt.Sprintf("%s_%d", server.Name, c.Namer)
 
 	return VirtualServer{
 		Name:      name,
