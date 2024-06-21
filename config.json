@@ -1,0 +1,13 @@
+{
+    "nodeNumber": 256,
+    "servers":[
+        {
+            "name": "NorthBiH",
+            "ip": "120.215.122.211:5500"
+        },
+        {
+            "name": "EastBridge",
+            "ip": "10.121.12.251:1225"
+        }
+    ]
+}
