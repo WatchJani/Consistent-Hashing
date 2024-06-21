@@ -6,6 +6,8 @@ import (
 	"sort"
 )
 
+const VNServer = 256
+
 type Node struct {
 	Num int
 }
@@ -13,8 +15,6 @@ type Node struct {
 type ConsistentHashing struct {
 	NumberVirtualNode int
 }
-
-const VNServer = 256
 
 func main() {
 	numberOfServer := 1
