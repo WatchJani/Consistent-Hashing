@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
-	c "root/consistent_hashing"
+
+	c "github.com/WatchJani/Consistent-Hashing/consistent_hashing"
 )
 
 func main() {
@@ -12,6 +13,6 @@ func main() {
 		log.Println(err)
 	}
 
-	s := ch.FindServer("key")
+	s := ch.FindServer("janko")
 	fmt.Println(s.Addr)
 }
